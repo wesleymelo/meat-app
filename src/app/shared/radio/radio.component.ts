@@ -29,12 +29,15 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
     this.value = value;
     this.onChange(this.value)
   }
+  
   writeValue(obj: any): void {
     this.value = obj;
   }
+  
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }
+  
   registerOnTouched(fn: any): void {
     throw new Error("Method not implemented.");
   }
